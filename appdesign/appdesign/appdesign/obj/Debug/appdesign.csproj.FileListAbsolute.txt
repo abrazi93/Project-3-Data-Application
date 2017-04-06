@@ -1,0 +1,2 @@
+C:\Users\Z\Dropbox\School\HRO Jaar 2\Project3\appdesign\appdesign\bin\Debug\appdesign.exe.config
+C:\Users\Z\Desktop\project3\Project-3-Data-Application\appdesign\appdesign\appdesign\bin\Debug\appdesign.exe.config
