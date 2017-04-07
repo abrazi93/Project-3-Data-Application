@@ -38,8 +38,6 @@ namespace DatabaseForm
                 MessageBox.Show("Deze parkeergarage is al gerigstreerd", "LRDC", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
                 dr.Close();
                 cnx.Close();
-                this.Hide();
-                Application.Exit();
             }
             if (blnfound == false)
             {
@@ -50,11 +48,18 @@ namespace DatabaseForm
                     {
                         cmd.Connection = conn;
                         cmd.CommandText = "insert into parking values('" + coordinaten.Text + "', '" + name.Text + "', '" + code.Text + "' , '" + type.Text + "' , '" + aantal_plaatsen.Text + "', '"+ adres.Text + "', '"+ plaats.Text + "', '" + gebied.Text + "');";
-                        Console.WriteLine("insert into parking values('" + coordinaten.Text + "', '" + name.Text + "', '" + code.Text + "' , '" + type.Text + "' , '" + aantal_plaatsen.Text + "', '" + adres.Text + "', '" + plaats.Text + "', '" + gebied.Text + "');"); 
-                        cmd.ExecuteNonQuery();
-                        conn.Close();
-                        this.Hide();
-                        Application.Exit();
+                        Console.WriteLine("insert into parking values('" + coordinaten.Text + "', '" + name.Text + "', '" + code.Text + "' , '" + type.Text + "' , '" + aantal_plaatsen.Text + "', '" + adres.Text + "', '" + plaats.Text + "', '" + gebied.Text + "');");
+                        if (name.Text == null || name.Text == "" || adres.Text == " " || adres.Text == null || adres.Text == "" || adres.Text == " " || plaats.Text == null || plaats.Text == "" || plaats.Text == " " || gebied.Text == null || gebied.Text == "" || gebied.Text == " ")
+                        {
+                            MessageBox.Show("De velden \"naam\", \"adres\", \"plaats\" en \"gebied\" zijn niet ingevuld", "LRDC", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
+                        }
+                        else
+                        {
+                            cmd.ExecuteNonQuery();
+                            conn.Close();
+                            this.Hide();
+                            Application.Exit();
+                        }
                     }
                 }
             }
