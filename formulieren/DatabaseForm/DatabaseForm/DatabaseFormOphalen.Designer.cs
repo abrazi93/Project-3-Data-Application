@@ -28,12 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.gebied = new System.Windows.Forms.TextBox();
-            this.plaats = new System.Windows.Forms.TextBox();
-            this.adres = new System.Windows.Forms.TextBox();
-            this.aantal_plaatsen = new System.Windows.Forms.TextBox();
-            this.type = new System.Windows.Forms.TextBox();
-            this.name = new System.Windows.Forms.TextBox();
             this.Pgebied = new System.Windows.Forms.Label();
             this.Pplaats = new System.Windows.Forms.Label();
             this.Padres = new System.Windows.Forms.Label();
@@ -48,49 +42,14 @@
             this.grid3 = new System.Windows.Forms.TextBox();
             this.grid4 = new System.Windows.Forms.TextBox();
             this.grid5 = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.name = new System.Windows.Forms.TextBox();
+            this.type = new System.Windows.Forms.TextBox();
+            this.aantal_plaatsen = new System.Windows.Forms.TextBox();
+            this.adres = new System.Windows.Forms.TextBox();
+            this.plaats = new System.Windows.Forms.TextBox();
+            this.gebied = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
-            // 
-            // gebied
-            // 
-            this.gebied.Location = new System.Drawing.Point(849, 100);
-            this.gebied.Name = "gebied";
-            this.gebied.Size = new System.Drawing.Size(156, 20);
-            this.gebied.TabIndex = 46;
-            // 
-            // plaats
-            // 
-            this.plaats.Location = new System.Drawing.Point(687, 100);
-            this.plaats.Name = "plaats";
-            this.plaats.Size = new System.Drawing.Size(156, 20);
-            this.plaats.TabIndex = 45;
-            // 
-            // adres
-            // 
-            this.adres.Location = new System.Drawing.Point(454, 100);
-            this.adres.Name = "adres";
-            this.adres.Size = new System.Drawing.Size(227, 20);
-            this.adres.TabIndex = 44;
-            // 
-            // aantal_plaatsen
-            // 
-            this.aantal_plaatsen.Location = new System.Drawing.Point(390, 100);
-            this.aantal_plaatsen.Name = "aantal_plaatsen";
-            this.aantal_plaatsen.Size = new System.Drawing.Size(58, 20);
-            this.aantal_plaatsen.TabIndex = 43;
-            // 
-            // type
-            // 
-            this.type.Location = new System.Drawing.Point(239, 100);
-            this.type.Name = "type";
-            this.type.Size = new System.Drawing.Size(145, 20);
-            this.type.TabIndex = 42;
-            // 
-            // name
-            // 
-            this.name.Location = new System.Drawing.Point(6, 100);
-            this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(227, 20);
-            this.name.TabIndex = 40;
             // 
             // Pgebied
             // 
@@ -222,11 +181,68 @@
             this.grid5.TabIndex = 52;
             this.grid5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(6, 36);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(227, 21);
+            this.comboBox1.TabIndex = 53;
+            // 
+            // name
+            // 
+            this.name.AllowDrop = true;
+            this.name.Location = new System.Drawing.Point(6, 100);
+            this.name.Name = "name";
+            this.name.Size = new System.Drawing.Size(227, 20);
+            this.name.TabIndex = 40;
+            // 
+            // type
+            // 
+            this.type.AllowDrop = true;
+            this.type.Location = new System.Drawing.Point(239, 100);
+            this.type.Name = "type";
+            this.type.Size = new System.Drawing.Size(145, 20);
+            this.type.TabIndex = 42;
+            // 
+            // aantal_plaatsen
+            // 
+            this.aantal_plaatsen.AllowDrop = true;
+            this.aantal_plaatsen.Location = new System.Drawing.Point(390, 100);
+            this.aantal_plaatsen.Name = "aantal_plaatsen";
+            this.aantal_plaatsen.Size = new System.Drawing.Size(58, 20);
+            this.aantal_plaatsen.TabIndex = 43;
+            // 
+            // adres
+            // 
+            this.adres.AllowDrop = true;
+            this.adres.Location = new System.Drawing.Point(454, 100);
+            this.adres.Name = "adres";
+            this.adres.Size = new System.Drawing.Size(227, 20);
+            this.adres.TabIndex = 44;
+            // 
+            // plaats
+            // 
+            this.plaats.AllowDrop = true;
+            this.plaats.Location = new System.Drawing.Point(687, 100);
+            this.plaats.Name = "plaats";
+            this.plaats.Size = new System.Drawing.Size(156, 20);
+            this.plaats.TabIndex = 45;
+            // 
+            // gebied
+            // 
+            this.gebied.AllowDrop = true;
+            this.gebied.Location = new System.Drawing.Point(849, 100);
+            this.gebied.Name = "gebied";
+            this.gebied.Size = new System.Drawing.Size(156, 20);
+            this.gebied.TabIndex = 46;
+            // 
             // DatabaseFormOphalen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1011, 487);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.grid5);
             this.Controls.Add(this.grid4);
             this.Controls.Add(this.grid3);
@@ -255,13 +271,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox gebied;
-        private System.Windows.Forms.TextBox plaats;
-        private System.Windows.Forms.TextBox adres;
-        private System.Windows.Forms.TextBox aantal_plaatsen;
-        private System.Windows.Forms.TextBox type;
-        private System.Windows.Forms.TextBox name;
         private System.Windows.Forms.Label Pgebied;
         private System.Windows.Forms.Label Pplaats;
         private System.Windows.Forms.Label Padres;
@@ -276,5 +285,12 @@
         private System.Windows.Forms.TextBox grid3;
         private System.Windows.Forms.TextBox grid4;
         private System.Windows.Forms.TextBox grid5;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox name;
+        private System.Windows.Forms.TextBox type;
+        private System.Windows.Forms.TextBox aantal_plaatsen;
+        private System.Windows.Forms.TextBox adres;
+        private System.Windows.Forms.TextBox plaats;
+        private System.Windows.Forms.TextBox gebied;
     }
 }

@@ -38,6 +38,7 @@ namespace DatabaseForm
                     {
                         while (reader.Read())
                         {
+                            comboBox1.ValueMember = reader.GetString(1) + "\r\n";
                             grid.Text += reader.GetString(1) + "\r\n";
                             grid1.Text += reader.GetString(3) + "\r\n";
                             grid2.Text += reader.GetString(4) + "\r\n";
