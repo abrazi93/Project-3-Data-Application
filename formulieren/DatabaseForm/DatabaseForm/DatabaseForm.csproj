@@ -61,6 +61,11 @@
     <Compile Include="DatabaseFormOphalen.Designer.cs">
       <DependentUpon>DatabaseFormOphalen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dataset_RotterdamDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dataset_RotterdamDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +92,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Dataset_RotterdamDataSet.xsc">
+      <DependentUpon>Dataset_RotterdamDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset_RotterdamDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Dataset_RotterdamDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset_RotterdamDataSet.xss">
+      <DependentUpon>Dataset_RotterdamDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -99,9 +115,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
