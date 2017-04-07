@@ -19,17 +19,20 @@ namespace appdesign
 
         private void parkingbtn_Click(object sender, EventArgs e)
         {
-
+            Form frm = new parking();
+            frm.Show();
         }
 
         private void chargingbtn_Click(object sender, EventArgs e)
         {
-
+            Form frm = new charging();
+            frm.Show();
         }
 
         private void eventbtn_Click(object sender, EventArgs e)
         {
-
+            Form frm = new events();
+            frm.Show();
         }
 
         private void instructionsbtn_Click(object sender, EventArgs e)

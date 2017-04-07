@@ -46,16 +46,43 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="charging.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="charging.Designer.cs">
+      <DependentUpon>charging.cs</DependentUpon>
+    </Compile>
+    <Compile Include="events.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="events.Designer.cs">
+      <DependentUpon>events.cs</DependentUpon>
+    </Compile>
     <Compile Include="menu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="menu.Designer.cs">
       <DependentUpon>menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="parking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="parking.Designer.cs">
+      <DependentUpon>parking.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="charging.resx">
+      <DependentUpon>charging.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="events.resx">
+      <DependentUpon>events.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="menu.resx">
       <DependentUpon>menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="parking.resx">
+      <DependentUpon>parking.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

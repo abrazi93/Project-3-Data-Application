@@ -43,7 +43,7 @@
             this.instructionsbtn.Name = "instructionsbtn";
             this.instructionsbtn.Size = new System.Drawing.Size(75, 23);
             this.instructionsbtn.TabIndex = 0;
-            this.instructionsbtn.Text = "Instructions";
+            this.instructionsbtn.Text = "Instructies";
             this.instructionsbtn.UseVisualStyleBackColor = true;
             this.instructionsbtn.Click += new System.EventHandler(this.instructionsbtn_Click);
             // 
@@ -63,7 +63,7 @@
             this.parkingbtn.Name = "parkingbtn";
             this.parkingbtn.Size = new System.Drawing.Size(160, 45);
             this.parkingbtn.TabIndex = 2;
-            this.parkingbtn.Text = "Search parking";
+            this.parkingbtn.Text = "Zoek parkeergarages";
             this.parkingbtn.UseVisualStyleBackColor = true;
             this.parkingbtn.Click += new System.EventHandler(this.parkingbtn_Click);
             // 
@@ -73,7 +73,7 @@
             this.chargingbtn.Name = "chargingbtn";
             this.chargingbtn.Size = new System.Drawing.Size(160, 45);
             this.chargingbtn.TabIndex = 3;
-            this.chargingbtn.Text = "Search charging spots";
+            this.chargingbtn.Text = "Zoek oplaadpalen";
             this.chargingbtn.UseVisualStyleBackColor = true;
             this.chargingbtn.Click += new System.EventHandler(this.chargingbtn_Click);
             // 
@@ -83,7 +83,7 @@
             this.eventbtn.Name = "eventbtn";
             this.eventbtn.Size = new System.Drawing.Size(160, 45);
             this.eventbtn.TabIndex = 4;
-            this.eventbtn.Text = "Search events";
+            this.eventbtn.Text = "Zoek evenementen";
             this.eventbtn.UseVisualStyleBackColor = true;
             this.eventbtn.Click += new System.EventHandler(this.eventbtn_Click);
             // 
