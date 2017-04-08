@@ -20,26 +20,31 @@ namespace DatabaseForm
 
         private void ophalen_Click(object sender, EventArgs e)
         {
+            textBox1.Clear();
+            textBox2.Clear();
+            textBox3.Clear();
+            textBox4.Clear();
+            textBox5.Clear();
+            textBox6.Clear();
             using (var conn = new NpgsqlConnection("Server=localhost;Port=5432; User Id=postgres;Password=Oujdaoui#48;Database=Dataset Rotterdam"))
             {
                 conn.Open();
                 using (var cmd = new NpgsqlCommand())
                 {
                     cmd.Connection = conn;
-                    /*cmd.CommandText = "SELECT * FROM parking where \"NAME\" = '" + name.Text + "' or \"ADRES\" = '" + adres.Text + "' or \"TYPE\" = '" + type.Text + "' or \"GEBIED\" = '" + gebied.Text + "' or \"PLAATS\" = '" + plaats.Text + "';";
-                    Console.WriteLine("SELECT * FROM parking where \"NAME\" = '" + name.Text + "' or \"ADRES\" = '" + adres.Text + "' or \"TYPE\" = '" + type.Text + "' or \"GEBIED\" = '" + gebied.Text + "' or \"PLAATS\" = '" + plaats.Text + "';");
+                    cmd.CommandText = "SELECT * FROM parking where \"NAME\" = '" + comboBox1.SelectedItem + "' or \"TYPE\" = '" + comboBox2.SelectedItem + "' or \"AANTAL_PLEKKEN\" = '" + comboBox3.SelectedItem + "' or \"ADRES\" = '" + comboBox4.SelectedItem + "' or \"PLAATS\" = '" + comboBox5.SelectedItem + "' or \"GEBIED\" = '" + comboBox6.SelectedItem + "';";
                     using (var reader = cmd.ExecuteReader())
                     {
                         while (reader.Read())
                         {
-                            name.Text = reader.GetString(1);
-                            type.Text = reader.GetString(3);
-                            aantal_plaatsen.Text = reader.GetString(4);
-                            adres.Text = reader.GetString(5);
-                            plaats.Text = reader.GetString(6);
-                            gebied.Text = reader.GetString(7);
+                            textBox1.Text += reader.GetString(1) + "\r\n";
+                            textBox2.Text += reader.GetString(3) + "\r\n";
+                            textBox3.Text += reader.GetString(4) + "\r\n";
+                            textBox4.Text += reader.GetString(5) + "\r\n";
+                            textBox5.Text += reader.GetString(6) + "\r\n";
+                            textBox6.Text += reader.GetString(7) + "\r\n";
                         }
-                    }*/
+                    }
                 }
             }
         }
@@ -57,6 +62,29 @@ namespace DatabaseForm
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fillByToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.parkingTableAdapter.FillBy(this.dataset_RotterdamDataSet.parking);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

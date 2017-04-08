@@ -97,5 +97,10 @@ namespace DatabaseForm
         {
 
         }
+
+        private void coordinaten_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

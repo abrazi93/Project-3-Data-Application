@@ -158,7 +158,7 @@
             this.coordinaten.Name = "coordinaten";
             this.coordinaten.Size = new System.Drawing.Size(282, 20);
             this.coordinaten.TabIndex = 21;
-            this.coordinaten.Text = "voer hier de coördinaten in van de parkeergarage";
+            this.coordinaten.TextChanged += new System.EventHandler(this.coordinaten_TextChanged);
             // 
             // name
             // 
